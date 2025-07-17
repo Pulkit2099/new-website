@@ -1,36 +1,108 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+overview-
+A modern, responsive website built with Next.js 14 and React 19, styled using Tailwind CSS, and deployed on Vercel.
 
-## Getting Started
+🔗 Live Site: https://new-website-six-beta.vercel.app
+📁 GitHub Repo: Pulkit2099/new-website
 
-First, run the development server:
+---
 
-```bash
+📦 Project Setup Instructions
+To run this project locally:
+git clone https://github.com/Pulkit2099/new-website.git
+cd new-website
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+🧱 Component Architecture Overview
+All reusable UI components are placed inside the components/ directory:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Navbar.jsx – Sticky top navigation bar for all screen sizes.
 
-## Learn More
+Footer.jsx – Responsive footer with links and copyright.
 
-To learn more about Next.js, take a look at the following resources:
+Form.jsx – Contact form with basic fields and validation.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Vehicle.jsx – Section showcasing a video of the vehicle with description.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Fonts/ – Custom Manrope font integration.
 
-## Deploy on Vercel
+## Each component is modular, clean, and uses Tailwind for styling.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+📱 Responsive Design Strategy
+Fully responsive across mobile, tablet, and desktop using Tailwind's responsive utilities (sm:, md:, lg: breakpoints).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Flex and grid layouts ensure adaptive structure.
+
+Mobile-first development approach.
+
+Navigation collapses into a hamburger menu for smaller screens.
+
+---
+
+⚡ Performance Optimization Techniques Employed
+Optimized fonts via next/font/google (Manrope).
+
+Lazy loading for video/media where possible.
+
+Image optimization via Next.js's next/image (if images are added in future).
+
+Static generation (next export) ready.
+
+Minimal external dependencies to reduce bundle size.
+
+---
+
+♿ Accessibility Considerations
+Semantic HTML used across components (header, main, footer).
+
+Accessible forms with proper label tags.
+
+Manrope font chosen for readability.
+
+Color contrast and font sizes tuned for legibility on all devices.
+
+---
+
+📚 Third-Party Libraries Used
+Tailwind CSS – Utility-first CSS framework.
+
+Next.js – React framework for fast static and server-rendered apps.
+
+React 19 – Latest version for enhanced performance and features.
+
+Vercel – Seamless deployment and hosting.
+
+---
+
+🧠 Assumptions & Decisions Made
+Chose Tailwind for faster UI development and responsiveness.
+
+Manrope font selected for modern, clean aesthetics.
+
+All video assets assumed to be hosted and available via standard URLs.
+
+Decided not to include external UI libraries (like Bootstrap/Chakra) to keep bundle size minimal.
+
+---
+
+🐛 Challenges Faced & Solutions
+Responsiveness across all devices: Resolved with Tailwind's mobile-first approach and testing with Chrome dev tools.
+
+Font rendering consistency: Used next/font/google to manage font loading properly across devices.
+
+Video integration: Ensured responsiveness and cross-browser playback for the vehicle showcase section.
+
+---
+
+🌱 Suggested Upcoming Features & Improvements
+Dark mode toggle with useTheme.
+
+Contact form integration with a backend service (e.g., Firebase or EmailJS).
+
+SEO enhancements (meta tags, OG tags).
+
+Add smooth scroll & animations using framer-motion or AOS.
+
+Integrate Google Analytics or Vercel Analytics for traffic tracking.
